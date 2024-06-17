@@ -1,0 +1,229 @@
+#javascript
+1.javascript is a Netscape's cross platform, object-based scripting language.
+2.js code is embedded into HTML pages.
+3.it is lightweight programming language.
+4.Client side js extends the core language by supplying object to control browser and its Document Object module.
+
+#why use js?
+1.Provides html designers a programming tool
+2.puts dynamic text into html pages.
+3.Reacts to event.
+4.Read and writes to html element.
+5.Can be used to perform Client side validations.
+eg.The script tag is....
+<script>javascript statements...</script>
+...
+<html>
+<head>
+</head>
+<body>
+<script type = "text/javascript">
+document.write("<h1> Hello world!</h1>");
+alert("Hello world");
+console.log("some message");
+</script>
+</body>
+</html>
+
+#Embedding JavaScript in HTML..
+Q.1 where to write javascript?
+1.Head section, 2. Body section 3. External file.
+eg.
+<html> 
+<head>
+<script language=“javascript">
+ document.write(“Hello World!“)
+</script> 
+</head> 
+<body > 
+
+</body> 
+</html> 
+
+
+#Data types in javascript...
+1.javascript is free-form language. Need not declare all variables, classes, and methods
+
+2.variables in javascript can be of types:
+1.Number (1,3.14)
+2.String ("This is javascript")
+3.Boolean(true or false)
+4.Null(null)-> Usually used to indicate the absence of a value.
+
+2. Defining variables-
+eg.var variableName = value
+-javascript variables are said to be dynamically typed untyped or  loosely typed
+-letters of the alphabet, digit 0-9 and the underscore(_) character  is case-sensitive.
+eg.var myVariable = 10;
+-cannot include spaces or any other punctuation character.
+-should not start with a digit.
+-should not be a reserved word in JavaScript.
+eg.var, function, if, else, while, for, break, continue, switch, class
+#javascript reserved words...
+1.abstract
+2.arguments
+3.await
+4.boolean
+5.break
+6.byte
+7.case
+8.catch
+9.char
+10.class
+11.const
+12.continue
+13.debugger
+14.default etc
+
+-First character of name must be either a letter or the underscore character.
+-No official limit on the length of variable name, but must fit within a line
+eg.
+examples of Valid and Invalid Identifiers:
+Valid Identifiers:
+
+javascript
+Copy code
+let myVariable = 10;
+let MyVariable = 20;
+let _privateVar = 30;
+let $dollarSignVar = 40;
+let var1 = 50;
+let _ = 60;  // Just an underscore is also a valid identifier
+
+Invalid Identifiers:
+
+javascript
+Copy code
+let 1variable = 70; // Cannot start with a digit
+let my-variable = 80; // Hyphens are not allowed
+let var@name = 90; // Special characters other than _ and $ are not allowed
+
+eg. var a = 10; 
+var -variable, a-identifier, 10-value
+
+-No official limit on the length of a variable, but must fit within  a line.
+
+
+#javascript operators:
+1. Arithmetic Operators (+,-,*,/,%).
+2.Assignment operators (=,+=,-=,*=,/=,%=)
+3.comparison. operators (==,!=,<,<=,>,>=)
+4.Boolean Operators(&&,||,!)
+5.Bitwise Operators(&,|,!,<<,>>,>>>)
+6.String Operators(=,+,+=)
+txt1 = "what a very "
+txt2="nice day!"
+txt3 = txt1 + txt2  
+output= what a very nice  day!
+7.conditional Operator(?:)
+
+
+#Control Structures and Loops :-
+1.javascript supports the usual control Structures.
+the conditionals...
+eg.1.if ..else
+
+if(condition){
+    statement1
+}else{
+    statement2
+}
+or 
+if(a>10){
+    document.write("Greater than 10")
+}else{
+    document.write("Less than 10")
+}
+or 
+document.write((a>10)?"Greater tan 10" : "Less than 10").
+
+2.switch:
+switch(variable){
+    case outcome 1:{
+        //stmts for outcome 1
+        break;
+    }
+    case outcome 2:{
+        //stmts for outcome 2
+        break;
+    }
+    default:{
+        //none of the outcome chosen
+    }
+}
+
+2.Iterations:
+1.for: 
+for([intial expression;][condition expression;] [increment expression]){
+    //stmts
+}
+for(i = 0 ; i<10; i++){
+    document.write("Hello World");
+}
+2.while:
+while(i<10){
+    document.write("Hello World")
+    i++
+}
+
+
+#javascript functions:
+1.Named function Declaration
+function myFunction(arg1,arg2,arg3){
+    return arg1+arg2+arg3;
+}
+//calling the function with arguments
+myFunction("abc","xyz", 4)
+
+2.function expression (Anonymous function Assigned to a variable):
+var area = function(w1,w2,h){
+    var area = (w1+w2)*h/2;
+    alert (area +"sq ft");
+};
+//calling the function expression
+area(2,3,4);
+3.Arrow function(ES6 Syntax):
+var diameter = (radius) =>{
+    return radius*2;
+}
+
+//calling the arrow function
+var d = diameter(5);
+
+3.Function expression (calculating Area of a Circle):
+var area = function(radius){
+    return Math.PI * radius * radius;
+}
+
+//calling area function and alerting the result
+var result = area(2);
+alert(result);
+
+#Global and Local Variables:
+<script language ="javascript">
+    var companyName = "Accenture"//Global variable
+    function f(){
+        var employeeName = "abc";//Local variable
+        document.write( "Welcome to "+companyName+ ","+employeeName);
+        
+    }
+</script>
+
+=>Variables that exist only inside a function are called Local Variables.
+=>variable that exist throughout the script are called Global variable.
+-there value can be changed anytime in the code and even by other functions.
+
+Predefined  function:
+1.isFinite: evaluate an arguments to determine if it is finite number.
+2.isNaN: evaluate an argument to determine if it is "NaN" (not a number)
+-isNaN (testValue),where testValue is the value you want to evaluate
+eg.isNaN(0)//false,isNaN("Hello")//true.
+
+*Parseint and parsefloat :
+-Return a numeric value for string argument.
+-eg.parseInt("123abc")//123
+-eg.parseFloat("123.45abc")//123.45
+e.parseInt("0xFF")
+-parseInt() interprets any 
+number beginning with “0x” or 
+“0X” as hexadecimal no.
