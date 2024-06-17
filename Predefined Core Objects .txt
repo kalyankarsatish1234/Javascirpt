@@ -1,0 +1,30 @@
+#Predefined Core Objects 
+1.String Objects:
+- String objects are created using the String() constructor.
+
+#creating a string object:
+var myString = new String("character");
+var myString = "abc"
+
+
+//properties of a String object:
+length : return the number of character in a string.
+"Satish".length //result = 6;
+"Four score".length // result = 10.
+"".length // result = 0;
+
+//String Object methods:
+1.chatAt(index): return the character at  a specified position.
+Eg: var str = "Hello World!" 
+str.charAt(0) // H 
+str.charAt(str.length-1) // returns!
+2.concat(): joins two or more strings
+Syntax: stringObject.concat(stringX,stringX)
+Eg. var str1 = "Hello";
+var str2 = "World";
+document.write(str1.concat(str2));
+
+
+
+
+
